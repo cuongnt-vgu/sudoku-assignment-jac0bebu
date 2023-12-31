@@ -62,7 +62,6 @@ struct SudokuBoard_impl
 {
     int solved_counter;
     Cell **data; // 9x9 cell board
-
     Cell **p_rows[BOARD_SIZE];  // rows pointers
     Cell **p_cols[BOARD_SIZE];  // cols pointers
     Cell **p_boxes[BOARD_SIZE]; // boxes pointers
@@ -84,6 +83,8 @@ struct Cell_impl
     int candidates[BOARD_SIZE];
     int value; // solved or 0
 };
+typedef struct Cell_impl Cell;
+
 ```
 - Each cell has an array of 9 integers representing the possible values (candidates). In this array, value could be 1 or 0, indicates that a candidate is existed or not. Note that the index of array is from 0 -> 8, different from 1 -> 9 of the possible values. Then, in the set and unset functions we have: 
 

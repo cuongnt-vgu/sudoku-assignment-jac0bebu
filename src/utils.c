@@ -1,7 +1,6 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
-
 #include "sudoku.h"
 
 void init_sudoku(SudokuBoard *p_board)

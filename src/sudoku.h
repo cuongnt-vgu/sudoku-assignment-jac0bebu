@@ -21,12 +21,10 @@ struct SudokuBoard_impl
 {
     int solved_counter;
     Cell **data; // 9x9 cell board
-
     Cell **p_rows[BOARD_SIZE];  // rows pointers
     Cell **p_cols[BOARD_SIZE];  // cols pointers
     Cell **p_boxes[BOARD_SIZE]; // boxes pointers
-    Cell *solved_cells[BOARD_SIZE *
-                       BOARD_SIZE]; // solved cell pointers (maximum)
+    Cell *solved_cells[BOARD_SIZE * BOARD_SIZE]; // solved cell pointers (maximum)
 };
 
 typedef struct SudokuBoard_impl SudokuBoard;
